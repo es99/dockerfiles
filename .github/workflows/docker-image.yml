@@ -16,4 +16,4 @@ jobs:
               run: |
                 docker build ./terraform \
                 --file ./terraform/Dockerfile \
-                --tag ${{ github.repository }}:${{ github.ref_name }}
+                --tag ${{ github.repository }}:$(date +%s)

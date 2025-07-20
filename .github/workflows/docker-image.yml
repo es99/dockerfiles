@@ -13,6 +13,7 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - name: Build Docker Image
-              run: docker build ./terraform \
+              run: |
+                docker build ./terraform \
                 --file Dockerfile \
                 --tag ${{ github.repository }}:${{ github.ref_name }}
